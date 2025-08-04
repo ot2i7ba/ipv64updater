@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Copyright (c) 2024 ot2i7ba
+# Copyright (c) 2025 ot2i7ba
 # https://github.com/ot2i7ba/
 # This code is licensed under the MIT License (see LICENSE for details).
 
