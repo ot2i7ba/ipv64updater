@@ -1,8 +1,8 @@
 # ipv64updater
-## Synology NAS Dynamic DNS Updater for ipv64.net
+This script provides an automated and reliable solution for updating dynamic DNS entries with ipv64.net from a Synology NAS system. It detects the current public IPv4 and IPv6 addresses (including the IPv6 prefix), and sends updates to ipv64.net only when necessary—either when the addresses have changed or after a configurable interval. To improve robustness, the script incorporates fallback mechanisms for IP detection and maintains a rotating log of all update activities. It is fully compatible with Synology’s DSM Task Scheduler and requires minimal configuration.
 
-> [!NOTE]
-> I make no claim of correctness or full functionality. As I am not particularly experienced with Bash, this script may contain errors, and I accept no warranty of any kind. This script was created out of necessity to help my friend Straight Shooter solve a DDNS issue involving the excellent service from [ipv64.net](https://ipv64.net). It is designed to be called regularly via the Synology NAS Task Scheduler. I have attempted to implement several fallback routines – whether for repeated invocations or for fetching IP addresses. For my needs the script works: IPv4, IPv6, and IPv6 prefix are correctly passed to ipv64.net. However, you may need to adjust the script for your specific setup. It is also possible that I have implemented some unnecessary logic in the code; please consider this a playful part of my self-study journey.
+> [!CAUTION]
+> This script is specifically written for use with ipv64.net Dynamic DNS updates on Synology NAS systems. I have not tested it in other environments or with other dynamic DNS providers, so I cannot guarantee its compatibility or performance outside of the context described here. Please note that this script is still under development, and I cannot guarantee flawless or fully reliable operation in every environment. It is tailored to meet specific requirements and personal needs at this stage. Use it with caution—especially in situations where continuous network availability or operational reliability is mission-critical.
 
 ---
 
@@ -63,3 +63,6 @@ Contributions are welcome! Please fork the repository and submit a pull request 
 
 # Disclaimer
 This project is provided without warranties. Users are advised to review the accompanying license for more information on the terms of use and limitations of liability.
+
+# Conclusion
+I make no claim of correctness or full functionality. As I am not particularly experienced with Bash, this script may contain errors, and I accept no warranty of any kind. This script was created out of necessity to help my friend Straight Shooter solve a DDNS issue involving the excellent service from [ipv64.net](https://ipv64.net). It is designed to be called regularly via the Synology NAS Task Scheduler. I have attempted to implement several fallback routines – whether for repeated invocations or for fetching IP addresses. For my needs the script works: IPv4, IPv6, and IPv6 prefix are correctly passed to ipv64.net. However, you may need to adjust the script for your specific setup. It is also possible that I have implemented some unnecessary logic in the code; please consider this a playful part of my self-study journey.
