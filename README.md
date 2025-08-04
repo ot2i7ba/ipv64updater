@@ -19,7 +19,7 @@ This script provides an automated and reliable solution for updating dynamic DNS
 
 1. **IPv4 Detection**:  
     - Checks `https://checkip.synology.com` for the public IPv4.
-    - Falls back to `https://ifconfig.co` if necessary.
+    - Falls back to `https://ifconfig.co` if necessary using IPv4 (`curl -4`).
 
 2. **IPv6 Detection**:  
     - Tries to read the global IPv6 directly from the specified NAS network interface.
