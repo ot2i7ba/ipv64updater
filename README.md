@@ -45,6 +45,21 @@ This script provides an automated and reliable solution for updating dynamic DNS
 
 3. Create a scheduled task in DSM Task Scheduler that invokes the script at your desired interval (recommended: not more than once every 3 houers).
 
+> [!TIP]
+> The script sends the current public IP/PREFIX values to ipv64.net using the following update URL format:
+>
+> ```
+> https://ipv64.net/update.php?key=<key>&domain=<domain>&ip=<ipaddr>&ip6=<ip6addr>&ipv6prefix=<ip6lanprefix>
+> ```
+>
+> | Placeholder       | Description                        |
+> |-------------------|------------------------------------|
+> | `<key>`           | Your personal ipv64.net key        |
+> | `<domain>`        | Your ipv64.net domain              |
+> | `<ipaddr>`        | Current public IPv4 address        |
+> | `<ip6addr>`       | Current public IPv6 address        |
+> | `<ip6lanprefix>`  | IPv6 LAN prefix (optional)         |
+
 ---
 
 ## Warning & Customization
