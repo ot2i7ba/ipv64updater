@@ -39,6 +39,10 @@
 
 1. Edit the configuration section at the top of the script (key, domain, interface, logging path, etc.).
 2. Place the script onto your Synology NAS, for example under `/volume1/docker/ipv64updater.sh`.
+
+> [!NOTE]
+> I personally use the `docker` directory as an example because this folder should generally not be encrypted. This ensures the script is always accessible to the DSM Task Scheduler and prevents issues that can arise if the NAS restarts and encrypted shares are not yet mounted or unlocked.
+
 3. Create a scheduled task in DSM Task Scheduler that invokes the script at your desired interval (recommended: not more than once every 3 houers).
 
 ---
